@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Console Output</title>
+</head>
+<body>
+<table align="center">
+    <tr>
+        <td>
+            <label for="temperature">Temperature:</label>
+        </td>
+        <td>
+            <input style="text-align:right;" id="temperature" name="temperature" type="number" min="5" max="30" step="0.5" disabled />
+        </td>
+        <td>
+            <label for="temperature">°C</label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="valve">Valve:</label>
+        </td>
+        <td>
+            <input style="text-align:right;" id="valve" name="valve" type="number" min="5" max="99" step="0.5" disabled />
+        </td>
+        <td>
+            <label for="valve">%</label>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td align="right">
+            <button id="button_id" type="button" style="display:block" disabled>Send</button>
+        </td>
+    </tr>
+</table>
+
+<script type="text/javascript" src="../js/lib/kotlin.js"></script>
+<script type="text/javascript" src="../js/app.js"></script>
+</body>
+</html>
