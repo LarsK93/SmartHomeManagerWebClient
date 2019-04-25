@@ -1,4 +1,4 @@
-import dao.TemperatureValveDao
+import dto.TemperatureValveDto
 import org.w3c.dom.Element
 import org.w3c.dom.HTMLButtonElement
 import org.w3c.dom.HTMLInputElement
@@ -37,9 +37,9 @@ fun fetchTemperatureValve() {
         if (req.status == HttpStatus.OK.code) {
             val text = req.responseText
             println(text)
-            val temperatureValveDao = JSON.parse<TemperatureValveDao>(text)
-            temperatureInputEl.value = temperatureValveDao.targetTemperature.toString()
-            valveInputEl.value = temperatureValveDao.valve.toString()
+            val temperatureValveDto = JSON.parse<TemperatureValveDto>(text)
+            temperatureInputEl.value = temperatureValveDto.targetTemperature.toString()
+            valveInputEl.value = temperatureValveDto.valve.toString()
             temperatureInputEl.disabled = false
             button.disabled = false
         }
